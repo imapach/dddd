@@ -1,0 +1,27 @@
+{
+  "name": "kelly",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "qq673125306",
+  "browser_action":
+  {
+    "default_icon": "1.png"
+  },
+  "content_scripts":
+  [
+    {
+      "matches": ["http://www.pceggs.com/play/pg28Insert.aspx?LID=*"],
+      "js": ["bet.js"],
+	  "run": "document_end"
+    },
+	{
+	  "matches": ["http://www.pceggs.com/play/pxya.aspx"],
+      "js": ["list.js"],
+	  "run": "document_end"
+	}
+  ],
+  "background":
+  {
+	"scripts":["background.js"]
+  }
+}
